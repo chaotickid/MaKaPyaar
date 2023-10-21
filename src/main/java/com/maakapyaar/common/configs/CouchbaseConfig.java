@@ -13,14 +13,19 @@ import org.springframework.data.couchbase.config.AbstractCouchbaseConfiguration;
 
 @Configuration
 public class CouchbaseConfig extends AbstractCouchbaseConfiguration {
+
     @Value("${spring.couchbase.username}")
     private String userName;
+
     @Value("${spring.couchbase.password}")
     private String password;
+
     @Value("${spring.couchbase.bucket-name}")
     private String bucketName;
+
     @Value("${spring.couchbase.connection-string}")
     private String connectionString;
+
     @Override
     public String getConnectionString() {
         return connectionString;
@@ -41,7 +46,3 @@ public class CouchbaseConfig extends AbstractCouchbaseConfiguration {
         return bucketName;
     }
 }
-
-
-
-
